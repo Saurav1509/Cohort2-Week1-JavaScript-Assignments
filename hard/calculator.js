@@ -30,10 +30,11 @@ class Calculator {
     str = str.replace(/ /g,'');
     console.log(str);
 
-    let result = math.evaluate(str);
+    this.res = math.evaluate(str);
 
-    return result;
-
+    if( this.res === Infinity ){
+      throw new Error("Cannot divide by Zero!!!")
+    }
   }
 
   add(num) {
@@ -49,9 +50,12 @@ class Calculator {
   }
 
   divide(num){
-    if( num!=0 ){
-      this.res /= num;
+
+    if(num === 0){
+      throw new Error('Cannot divide by zero');
     }
+
+    this.res /= num;
 
     // if(res)
   }
