@@ -53,7 +53,7 @@ class Calculator {
       this.res /= num;
     }
 
-    if(res)
+    // if(res)
   }
 
   clear(){
