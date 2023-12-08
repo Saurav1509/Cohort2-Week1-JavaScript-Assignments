@@ -22,10 +22,10 @@ function calculateTime(n) {
     const after = new Date();
     const afterInMS = after.getTime();
     
-    return ((afterInMS - beforeInMS)/100);
+    return ((afterInMS - beforeInMS)/1000);
 
 }
 
 console.log(calculateTime(1000));
 console.log(calculateTime(100000000));
-console.log(calculateTime(1000000000));
+console.log(calculateTime(10000000000));
